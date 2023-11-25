@@ -95,6 +95,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 //        session.setAttribute("user", userDTO);
         // session的原理是基于cookie，每个session都有一个唯一的sessionId，在访问tomcat时sessionId就自动的写入cookie当中
         // 之后每次请求都会带着这个sessionId，根据sessionId就能找到session，找到session就能找到用户信息
+        // session是内存空间，tomcat的内存空间
 
         // 生成token，作为登录令牌
         String token = UUID.randomUUID().toString(true);
